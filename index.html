@@ -196,7 +196,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-02-20 20:52:32 / Modified: 20:52:28" itemprop="dateCreated datePublished" datetime="2020-02-20T20:52:32+08:00">2020-02-20</time>
+              <time title="Created: 2020-02-20 22:58:21 / Modified: 22:58:16" itemprop="dateCreated datePublished" datetime="2020-02-20T22:58:21+08:00">2020-02-20</time>
             </span>
 
           
@@ -210,28 +210,91 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="DL01-感知机"><a href="#DL01-感知机" class="headerlink" title="DL01_感知机"></a>DL01_感知机</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 实现与门</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+          <h1 id="DL01-感知机"><a href="#DL01-感知机" class="headerlink" title="DL01_感知机"></a>DL01_感知机</h1><h2 id="实现与门"><a href="#实现与门" class="headerlink" title="实现与门"></a>实现与门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x1,x2)</span>:</span></span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1,x2])</span><br><span class="line">    b = <span class="number">-0.7</span></span><br><span class="line">    result = np.sum(w*x)+b</span><br><span class="line">    <span class="keyword">if</span> result &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">yu</span><span class="params">(x1,x2)</span>:</span></span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1,x2])</span><br><span class="line">    b = <span class="number">-0.7</span></span><br><span class="line">    result = np.sum(w*x)+b</span><br><span class="line">    <span class="keyword">if</span> result &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(<span class="number">0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yu(<span class="number">0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
 
 
 
 
-<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yu(<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 
 
 
 
-<pre><code>1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yu(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><h2 id="实现与非门"><a href="#实现与非门" class="headerlink" title="实现与非门"></a>实现与非门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">yufei</span><span class="params">(x1,x2)</span>:</span></span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1,x2])</span><br><span class="line">    b = <span class="number">-0.7</span></span><br><span class="line">    result = np.sum(w*x)+b</span><br><span class="line">    <span class="keyword">if</span> result &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yufei(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yufei(<span class="number">1</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yufei(<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><h2 id="实现或门"><a href="#实现或门" class="headerlink" title="实现或门"></a>实现或门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">huo</span><span class="params">(x1,x2)</span>:</span></span><br><span class="line">    w = np.array([<span class="number">0.5</span>, <span class="number">0.5</span>])</span><br><span class="line">    x = np.array([x1,x2])</span><br><span class="line">    b = <span class="number">-0.2</span></span><br><span class="line">    result = np.sum(w*x)+b</span><br><span class="line">    <span class="keyword">if</span> result &lt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">huo(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">huo(<span class="number">1</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">huo(<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<pre><code>0</code></pre><h2 id="使用多层感知机，实现异或门"><a href="#使用多层感知机，实现异或门" class="headerlink" title="使用多层感知机，实现异或门"></a>使用多层感知机，实现异或门</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">yihuo</span><span class="params">(x1,x2)</span>:</span></span><br><span class="line">    a = yufei(x1,x2)</span><br><span class="line">    b = huo(x1,x2)</span><br><span class="line">    print(a,b)</span><br><span class="line">    <span class="keyword">return</span> yu(a,b)</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yihuo(<span class="number">0</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>1 0
+
+
+
+
+
+0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yihuo(<span class="number">1</span>,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>1 1
+
+
+
+
+
+1</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yihuo(<span class="number">1</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<pre><code>0 1
+
+
+
+
+
+0</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
